@@ -11,7 +11,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-black">
     <header class="bg-black">
         <div class="row">
             <div class="col-4">
@@ -32,16 +32,89 @@
 
         </div>
     </header>
-    <main>
-        <section class="row">
+    <main class="bg-dark mt-3">
+        <section class="row mt-2">
             <div class="col-6">
-
+                <div class="row row-cols-1 row-cols-md-3 g-2">
+                    <div class="col">
+                        <div class="card h-100 bg-black text-white">
+                            <img src="images/kylian.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Kylian Mbappe</h5>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-info" onclick="addToList(this)">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-black text-white">
+                            <img src="images/messi.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Lionel Messi</h5>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-info" onclick="addToList(this)">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-black text-white">
+                            <img src="images/neymar.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Neymar Jr.</h5>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-info" onclick="addToList(this)">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 my-2 ">
+                    <div class="col">
+                        <div class="card h-100 bg-black text-white">
+                            <img src="images/ramos.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sergio Ramos</h5>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-info" onclick="addToList(this)">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-black text-white">
+                            <img src="images/renato.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Renato Sanches</h5>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-info" onclick="addToList(this)">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-black text-white">
+                            <img src="images/vitoro.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Vitoro Machado</h5>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-info" onclick="addToList(this)">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-6"></div>
+            <div class="col-6">
+                <h3 class="text-white">Selected-V</h3>
+                <ul id="list" class="text-white">
+                </ul>
+            </div>
         </section>
     </main>
     <!-- <script src="js/utility.js"></script> -->
-    <!-- <script src="js/app.js"></script> -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>
