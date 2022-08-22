@@ -1,38 +1,27 @@
 const names = [];
 function displayPlayers() {
-    const playerList = document.getElementById('list');
-    playerList.innerText = names.length;
+    const heading = document.getElementById('heading');
+    heading.innerText = names.length;
 
+    const playerList = document.getElementById('list');
+    playerList.textContent = '';
     for (let i = 0; i < names.length; i++) {
         if (names.length <= 5) {
-            const player = document.createElement('li');
+            const player = document.createElement('tr');
             player.innerHTML = `
-            <li>${names[i]}</li>`;
+            <th>${i + 1}</th>
+            <th>${names[i]}</th>`;
             playerList.appendChild(player);
         }
         else {
             alert('You have reached the maximum number of players');
-            break;
+            window.location.reload();
         }
     }
 }
-
 function addToList(element) {
-    const playerName = element.parentNode.parentNode.parentNode.children[0].innerText;
+    const playerName = element.parentNode.parentNode.children[0].innerText;
     names.push(playerName);
     element.disabled = true;
     displayPlayers();
 }
-
-// function disableButton(element){
-    // element.disabled = true;    
-// }
-// function addToList(element) {
-//         const playerContainer = document.createElement('li');
-//         const text = document.createTextNode(element.parentNode.parentNode.parentNode.children[0].innerText);
-//         playerContainer.appendChild(text);
-//         document.getElementById('list').appendChild(playerContainer);
-//     }
-
-/* <button onclick="removeFromList(this)">Remove</button>`; */ 
-// }
