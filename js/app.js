@@ -1,8 +1,5 @@
 const names = [];
 function displayPlayers() {
-    const playerContainer = document.getElementById('players');
-    playerContainer.innerHTML = '';
-
     const playerList = document.getElementById('list');
     playerList.innerText = names.length;
 
@@ -23,10 +20,13 @@ function displayPlayers() {
 function addToList(element) {
     const playerName = element.parentNode.parentNode.parentNode.children[0].innerText;
     names.push(playerName);
-
+    element.disabled = true;
     displayPlayers();
 }
 
+// function disableButton(element){
+    // element.disabled = true;    
+// }
 // function addToList(element) {
 //         const playerContainer = document.createElement('li');
 //         const text = document.createTextNode(element.parentNode.parentNode.parentNode.children[0].innerText);
