@@ -1,29 +1,38 @@
-// function displayPlayers() {
-//     const playerContainer = document.getElementById('list');
-//     playerContainer.textContent = '';
+const names = [];
+function displayPlayers() {
+    const playerContainer = document.getElementById('players');
+    playerContainer.innerHTML = '';
 
-//     for (let i = 0; i < 5; i++) {
-//         let names = [];
-//         const player = document.createElement('li');
-//         player.innerHTML = `
-//         <span>${names[i + 1]}</span>
-//         <li>${names[i].playerName}</li>
-//         `;
-//         playerContainer.appendChild(player);
-//     }
-// }
+    const playerList = document.getElementById('list');
+    playerList.innerText = names.length;
 
-// function addToList(element) {
-//     let names = [];
-//     const playerName = element.parentNode.parentNode.children[0].innerText;
-//     names.push(playerName);
-
-//     displayPlayers();
-// }
+    for (let i = 0; i < names.length; i++) {
+        if (names.length <= 5) {
+            const player = document.createElement('li');
+            player.innerHTML = `
+            <li>${names[i]}</li>`;
+            playerList.appendChild(player);
+        }
+        else {
+            alert('You have reached the maximum number of players');
+            break;
+        }
+    }
+}
 
 function addToList(element) {
-    const playerContainer = document.createElement('li');
-    const text = document.createTextNode(element.parentNode.parentNode.parentNode.children[0].innerText);
-    playerContainer.appendChild(text);
-    document.getElementById('list').appendChild(playerContainer);
+    const playerName = element.parentNode.parentNode.parentNode.children[0].innerText;
+    names.push(playerName);
+
+    displayPlayers();
 }
+
+// function addToList(element) {
+//         const playerContainer = document.createElement('li');
+//         const text = document.createTextNode(element.parentNode.parentNode.parentNode.children[0].innerText);
+//         playerContainer.appendChild(text);
+//         document.getElementById('list').appendChild(playerContainer);
+//     }
+
+/* <button onclick="removeFromList(this)">Remove</button>`; */ 
+// }
