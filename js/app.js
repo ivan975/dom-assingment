@@ -4,9 +4,9 @@ function displayPlayers() {
     heading.innerText = names.length;
 
     const playerList = document.getElementById('list');
-    playerList.textContent = '';
+    playerList.innerHTML = '';
     for (let i = 0; i < names.length; i++) {
-        if (names.length <= 5) {
+        if (names.length < 6) {
             const player = document.createElement('tr');
             player.innerHTML = `
             <th>${i + 1}</th>
@@ -15,7 +15,8 @@ function displayPlayers() {
         }
         else {
             alert('You have reached the maximum number of players');
-            window.location.reload();
+            break;
+            // window.location.reload();
         }
     }
 }

@@ -4,5 +4,8 @@ h1 {
   font-family: "Berkshire Swash", cursive;
 }
 .ml {
-  margin-left: 25rem;
+  margin-right: 25rem;
+}
+.btn-margin {
+  margin-left: 38%;
 }
